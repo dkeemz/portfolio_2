@@ -1,0 +1,436 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+*:visited {
+  color: white;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: red;
+  height: 75px;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  box-shadow: 1px 1px 5px 3px #aaa;
+}
+.nav-container .logo {
+  color: #fff;
+  font-size: xx-large;
+  font-family: barlow;
+}
+.nav-container .link-container {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.nav-container .link-container li {
+  margin-left: 25px;
+  padding: 13px;
+  color: white;
+  text-decoration: none;
+}
+.nav-container .link-container li:hover {
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.nav-container .link-container li a {
+  padding: 25px;
+  color: #fff;
+  transition: 1500ms;
+}
+.nav-container .link-container li a:visited {
+  padding: 25px;
+  color: #fff;
+  transition: 1500ms;
+}
+.nav-container .link-container li a:hover {
+  color: red;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.blink {
+  animation: blink 500ms infinite;
+}
+
+.main-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  width: 50%;
+}
+.grey {
+  font-size: 70px;
+  color: #bbb;
+}
+.main-center h1 {
+  font-weight: 900;
+  font-size: 65px;
+  margin-top: 15px;
+}
+.main-center p {
+  margin: 20px 37px;
+  text-align: left;
+  font-weight: 200;
+  font-size: 35px;
+}
+
+.footer {
+  background-color: #999;
+  min-height: 250px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.footer .foot1 {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .social ul {
+  justify-self: center;
+  align-items: center;
+  list-style: none;
+  display: flex;
+}
+.footer .social ul li {
+  align-self: center;
+  align-content: center;
+  padding: 10px;
+  margin: 0px 10px;
+}
+.footer .foot2 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+/* skills page */
+.main-skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0px;
+}
+.main-skill .skill-section {
+  font-size: 25px;
+  background-color: #666;
+  padding: 25px;
+}
+.main-skill .skill-section p {
+  color: #fff;
+}
+.main-skill .console {
+  color: #aaa;
+}
+
+/* projects page */
+.projects-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: #aaa; */
+  padding: 10px;
+}
+.project-container {
+  border: 1px solid black;
+  z-index: 2;
+  margin: 15px;
+  width: 270px;
+  /* padding: 15px; */
+  height: 450;
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  border-radius: 5px;
+  background-color: #777;
+}
+.project-container:hover {
+  box-shadow: 1px 1px 7px 7px #aaa;
+}
+.project-container img {
+  width: 100%;
+  align-self: center;
+  flex-grow: 3;
+  background-color: #777;
+}
+.project-container h2 {
+  color: #fff;
+  padding: 3px;
+  flex-grow: 1;
+}
+.project-container p {
+  color: #fff;
+  padding: 5px;
+  flex-grow: 3;
+  background-color: #777;
+}
+.project-container .project-links {
+  flex-grow: 1;
+  padding: 3px;
+  /* background-color: turquoise; */
+}
+.project-container .project-links button {
+  padding: 5px;
+  margin: 5px;
+  background-color: darkred;
+  border: 0px solid;
+  border-radius: 5px;
+  display: inline-flex;
+  flex-direction: row;
+  color: #fff;
+}
+.project-container .project-links button:hover {
+  background-color: red;
+}
+
+/* For Tablets */
+
+@media screen and (max-width: 1300px) {
+  .grey {
+    font-size: 40px;
+    color: #bbb;
+  }
+  .nav-container .link-container li {
+    margin-left: 5px;
+    padding: 13px;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-container .link-container li:hover {
+    background-color: white;
+  }
+  .nav-container .link-container li a {
+    padding: 25px;
+    color: #fff;
+    transition: 1500ms;
+  }
+  .nav-container .link-container li a:hover {
+    color: red;
+  }
+
+  .main-center h1 {
+    font-weight: 900;
+    font-size: 35px;
+  }
+  .main-center p {
+    margin: 20px 37px;
+    text-align: left;
+    font-weight: 200;
+    font-size: 15px;
+  }
+  .footer {
+    background-color: #999;
+    min-height: 150px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    font-weight: bolder;
+  }
+  .footer p {
+    font-size: 8px;
+  }
+
+  /* projects page */
+  .projects-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .outer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: space-around;
+    padding: 10px;
+  }
+  .project-container {
+    background-color: #fff;
+    margin: 25px;
+    width: 250px;
+    padding: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px 5px #aaa;
+  }
+  .project-container img {
+    width: 90%;
+    align-self: center;
+    flex-grow: 3;
+    /* background-color: hotpink; */
+  }
+
+  /* skills page */
+  .main-skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+  }
+  .main-skill .skill-section {
+    font-size: 20px;
+    background-color: #666;
+    padding: 25px;
+  }
+}
+
+/* for phones */
+
+@media screen and (max-width: 600px) {
+  .nav-container .logo {
+    color: #fff;
+    background-color: #bde;
+    font-family: "Courier New";
+    font-size: medium;
+    padding: 5px;
+  }
+  .nav-container .link-container li {
+    margin-left: 3px;
+    padding: 3px;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-container .link-container li:hover {
+    background-color: white;
+  }
+  .nav-container .link-container li a {
+    padding: 5px;
+    color: #fff;
+    transition: 1500ms;
+  }
+  .nav-container .link-container li a:hover {
+    color: red;
+  }
+
+  .main-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px;
+    width: 80%;
+  }
+  .grey {
+    font-size: 30px;
+    color: #bbb;
+  }
+  .main-center h1 {
+    font-weight: 900;
+    font-size: 25px;
+  }
+  .main-center p {
+    margin: 20px 37px;
+    text-align: left;
+    font-weight: 200;
+    font-size: 20px;
+  }
+  .footer {
+    background-color: #999;
+    min-height: 150px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+  }
+  .footer p {
+    font-size: 5px;
+  }
+  /* projects page */
+  .projects-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .outer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .project-container {
+    background-color: #fff;
+    margin: 25px;
+    width: 250px;
+    padding: 20px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px 5px #aaa;
+  }
+  .project-container img {
+    width: 90%;
+    align-self: center;
+    flex-grow: 3;
+    background-color: hotpink;
+  }
+
+  /* skills page */
+  .main-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0px;
+  }
+  .main-skill .skill-section {
+    font-size: 13px;
+    background-color: #666;
+    padding: 25px;
+  }
+}
+
+/* Animation */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

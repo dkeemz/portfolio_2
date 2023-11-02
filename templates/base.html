@@ -1,0 +1,74 @@
+{% load static %} {% block header %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: roboto;
+      }
+      *:visited {
+        color: white;
+      }
+      @font-face {
+        font-family: roboto;
+        src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
+      }
+      @font-face {
+        font-family: barlow;
+        src: local("barlow") url("../assets/fonts/Barlow/Barlow-Bold.ttf")
+          format(trurtype);
+      }
+      .nav-container .logo {
+        color: #fff;
+        font-size: xx-large;
+        font-family: barlow;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'assets/skills.css' %}" />
+    <title>Intro | Abdulhakeem</title>
+  </head>
+  <body id="theme">
+    <main class="main">
+      <nav class="nav-container">
+        <section class="logo">
+          <h5>LOGO</h5>
+        </section>
+        <section>
+          <ul class="link-container">
+            <li><a href="{% url "index" %}">index</a></li>
+            <li><a href="{% url "skills" %}">skills</a></li>
+            <li><a href="{% url "projects" %}">projects</a></li>
+            <li>
+              <a id="toggle_theme_btn" onclick="change_theme()" href="#">🌙</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+      {% endblock header %} {% block content %}{% endblock content %} 
+      {% block footer %}
+      <footer id="footer" class="footer">
+        <section class="foot1">
+          <nav class="social">
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Github</li>
+            </ul>
+          </nav>
+        </section>
+        <section class="foot2">
+          <p class="blink">Created by Abdulhakeem &copy; 2023</p>
+        </section>
+      </footer>
+    </main>
+    <script src="{% static './assets/js/index.js' %}"></script>
+  </body>
+</html>
+{% endblock footer %}
